@@ -63,8 +63,11 @@ nav li a{display:block;text-decoration:none;font:700 2rem/1 "Barlow Condensed",s
 nav li a:hover,nav li a.on{color:var(--amber);padding-left:10px}
 nav .tel{margin-top:auto;padding-top:28px}
 nav .tel a{display:inline-flex;color:#fff}
+/* banner */
+.banner{padding:calc(68px + env(safe-area-inset-top,0px)) 0 0;background:var(--navy);line-height:0}
+.banner img{width:100%;height:auto;display:block;max-height:80vh;object-fit:cover;object-position:60% center}
 /* hero */
-.hero{padding:calc(110px + env(safe-area-inset-top,0px)) 0 70px;background:radial-gradient(1200px 500px at 85% 0,rgba(244,162,30,.22),transparent 60%),linear-gradient(180deg,var(--navy),#0f3a6e);color:#fff}
+.hero{padding:56px 0 70px;background:radial-gradient(1200px 500px at 85% 0,rgba(244,162,30,.22),transparent 60%),linear-gradient(180deg,var(--navy),#0f3a6e);color:#fff}
 .hero .wrap{display:grid;gap:36px;align-items:center}
 .hero h1{font-size:clamp(2.6rem,9vw,5rem);font-weight:800;margin-bottom:.35em}
 .hero h1 em{font-style:normal;color:var(--amber)}
@@ -128,8 +131,6 @@ footer p{margin:0 auto;font-size:.92rem}
 .top.on{opacity:1;transform:none;pointer-events:auto}
 @media (min-width:760px){
  .wrap{width:min(1120px,100% - 64px)}
- .hero .wrap{grid-template-columns:1.05fr 1fr}
- .hero .logo{order:0}
  .srv article{grid-template-columns:1fr 1.6fr;gap:30px}
  .zone ul{grid-template-columns:repeat(3,1fr)}
  .grid{--w:360px}
@@ -195,7 +196,10 @@ footer p{margin:0 auto;font-size:.92rem}
 </nav>
 
 <main>
-<section class="hero" id="home-s">
+<section class="banner" id="home-s">
+ <img src="images/home-banner-riparazioni-elettriche.webp" srcset="images/home-banner-riparazioni-elettriche-piccola.webp 900w, images/home-banner-riparazioni-elettriche.webp 1672w" sizes="100vw" width="1672" height="941" alt="Energia 24 - riparazioni elettriche: elettricista al lavoro su un quadro elettrico" fetchpriority="high">
+</section>
+<section class="hero">
  <div class="wrap">
   <div>
    <h1>Elettricista a Teramo: impianti elettrici e fotovoltaico <em>sempre acceso.</em></h1>
@@ -205,31 +209,6 @@ footer p{margin:0 auto;font-size:.92rem}
     <a class="btn b2" href="tel:+393487807612">Chiama ora</a>
    </div>
   </div>
-  <svg class="logo" viewBox="0 0 660 230" role="img" aria-label="Energia24" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<linearGradient id="goldx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset=".5" stop-color="#f5a623"/><stop offset="1" stop-color="#c9740c"/></linearGradient>
-<linearGradient id="bluex" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6cc0ff"/><stop offset=".45" stop-color="#1f74da"/><stop offset="1" stop-color="#093a85"/></linearGradient>
-<linearGradient id="orgx" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ef7b1c"/><stop offset="1" stop-color="#ffc15a"/></linearGradient>
-<linearGradient id="txx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#b8c4d4"/><stop offset="1" stop-color="#e9eef5"/></linearGradient>
-<clipPath id="cpx"><polygon points="0,0 200,0 200,72 92,178 0,150"/></clipPath>
-<filter id="embx" x="-15%" y="-15%" width="130%" height="140%" color-interpolation-filters="sRGB">
-<feGaussianBlur in="SourceAlpha" stdDeviation="2" result="b"/>
-<feSpecularLighting in="b" surfaceScale="5" specularConstant="1.2" specularExponent="24" lighting-color="#fff" result="s"><feDistantLight azimuth="235" elevation="48"/></feSpecularLighting>
-<feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/>
-<feComposite in="SourceGraphic" in2="s2" operator="arithmetic" k1="0" k2="1" k3=".9" k4="0" result="lit"/>
-<feDropShadow dx="2" dy="3.5" stdDeviation="2.6" flood-color="#04122a" flood-opacity=".5"/>
-</filter>
-</defs>
-<g filter="url(#embx)">
-<g clip-path="url(#cpx)"><circle cx="82" cy="120" r="46" fill="url(#goldx)"/><circle cx="82" cy="120" r="34" fill="none" stroke="#fff2b8" stroke-opacity=".7" stroke-width="3"/><path d="M33.0 121.5 L10.7 130.0 L34.5 132.0 Z M33.9 110.5 L7.5 113.5 L33.0 121.0 Z M37.3 99.9 L8.4 96.1 L34.0 110.0 Z M43.0 90.4 L13.8 79.0 L37.5 99.4 Z M50.6 82.4 L23.7 63.7 L43.3 90.0 Z M59.9 76.3 L37.4 51.3 L51.0 82.0 Z M70.3 72.4 L54.0 43.0 L60.4 76.0 Z M81.3 71.0 L72.1 39.5 L70.8 72.3 Z M92.4 72.1 L90.3 40.9 L81.8 71.0 Z M102.9 75.7 L107.2 46.8 L92.9 72.2 Z M112.3 81.5 L121.6 56.6 L103.3 75.9 Z M120.2 89.3 L132.9 69.1 L112.7 81.8 Z" fill="url(#goldx)"/></g>
-<path d="M120 86 L176 44 L168 36 L198 30 L194 62 L186 54 L134 100 Z" fill="url(#orgx)"/>
-<path d="M118 70 L162 70 L136 112 L160 112 L74 214 L102 138 L74 138 Z" fill="url(#bluex)"/>
-</g>
-<g filter="url(#embx)" font-family="Montserrat,'Barlow',Arial,sans-serif" font-weight="800" font-size="68">
-<text x="212" y="152" textLength="326" lengthAdjust="spacingAndGlyphs" fill="url(#txx)">ENERGIA</text>
-<text x="550" y="152" textLength="100" lengthAdjust="spacingAndGlyphs" fill="url(#orgx)">24</text>
-</g>
-</svg>
  </div>
 </section>
 
@@ -261,13 +240,7 @@ footer p{margin:0 auto;font-size:.92rem}
  <div class="wrap">
   <h2>Dove interveniamo</h2>
   <p class="lead">Energia 24 opera principalmente nella provincia di Teramo e in tutto il territorio dell'Abruzzo, offrendo servizi rapidi e puntuali sia per le urgenze H24 che per le installazioni programmate.</p>
-  <h3>Zone coperte dal servizio</h3>
-  <ul>
-   <li>Teramo e comuni limitrofi</li>
-   <li>Costa adriatica e zone interne della provincia</li>
-   <li>Disponibilità per valutare interventi in base alla tipologia di lavoro richiesto (civile, industriale o fotovoltaico)</li>
-  </ul>
-  <p style="margin-top:20px">Elettricista a Teramo, Giulianova, Roseto degli Abruzzi, Alba Adriatica, Martinsicuro, Silvi, Atri, Montorio al Vomano, Campli, Castellalto, Tortoreto e in tutta la provincia di Teramo, fino a Pescara e al resto dell'Abruzzo.</p>
+  <p>Elettricista a Teramo, Giulianova, Roseto degli Abruzzi, Alba Adriatica, Martinsicuro, Silvi, Atri, Montorio al Vomano, Campli, Castellalto, Tortoreto e in tutta la provincia di Teramo, fino a Pescara e al resto dell'Abruzzo.</p>
  </div>
 </section>
 
